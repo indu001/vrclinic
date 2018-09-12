@@ -1,6 +1,8 @@
+process.env.NODE_ENV='development';
+const config = require('./serverConfig');
 const express = require('express');
 const app = express();
-const port = 3001;
+const port = config.app.port;
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const session = require('express-session');
@@ -9,7 +11,7 @@ const { sequelize } = require('./sequelize');
 const Store = require('connect-session-sequelize')(session.Store);
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: `http://${config.app.host}:3000`,
   credentials: true
 }));
 
@@ -46,5 +48,4 @@ app.use((err, req, res, next) => {
 
 app.listen(port, () => {
   console.log("Server listening on port " + port);
-  console.log("Running in :"  + process.env);
 });

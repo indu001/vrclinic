@@ -1,8 +1,11 @@
+const config = require('./serverConfig');
 const Sequelize = require('sequelize');
 const UserModel = require('./models/user');
 
-const sequelize = new Sequelize('mysql', 'root', 'groot', {
-  host: 'localhost',
+
+const sequelize = new Sequelize (config.database.name, 
+  config.database.user, config.database.password, {
+  host: config.database.host,
   dialect: 'mysql',
   operatorsAliases: false,
   pool: {
