@@ -42,6 +42,7 @@
     "smooth-scrollbar": "^8.2.5",
     "styled-components": "^2.2.1",
     "styled-theme": "^0.3.3",
+    "winston": "^3.1.0",
     "yarn": "^1.9.4"
   },
   "devDependencies": {

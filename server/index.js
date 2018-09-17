@@ -1,5 +1,6 @@
 process.env.NODE_ENV='development';
 const config = require('./serverConfig');
+const logger = require('../logger/logger');
 const express = require('express');
 const app = express();
 const port = config.app.port;
@@ -14,6 +15,8 @@ app.use(cors({
   origin: `http://${config.app.host}:3000`,
   credentials: true
 }));
+
+logger.info('Testing Winston logs');
 
 app.use(session({
   secret: 'agatha christie',
