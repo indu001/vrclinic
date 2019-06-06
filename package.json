@@ -38,7 +38,7 @@
     "redux-devtools-log-monitor": "^1.2.0",
     "redux-saga": "^0.16.0",
     "redux-thunk": "^2.2.0",
-    "sequelize": "^4.4.2",
+    "sequelize": "5.3.0",
     "smooth-scrollbar": "^8.2.5",
     "styled-components": "^2.2.1",
     "styled-theme": "^0.3.3",
